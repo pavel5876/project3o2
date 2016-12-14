@@ -10,7 +10,7 @@
 	<article>
 		<h2>VIDEO CONTEST <br> AARHUS 2017</h2>
 		<p>Welcome to our video gallery. Here you can see what other people have created for our 2017 event and also vote for the one that best depicts Aarhus as an European Capital of Culture.<br>The winner will be selected based on the cumulative votes from the teachers of <a href="http://www.animwork.dk/en/">Animation Workshop</a> and the people that cast their vote on our campaign website.</p>
-		<h3 class"headline">GALLERY</h3>
+		<h3 class="headline">GALLERY</h3>
 	</article>
 	<div class="flex_arrange">
 <?php

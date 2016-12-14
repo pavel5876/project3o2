@@ -1,13 +1,13 @@
-	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script><div class="support_sponsors">
-	<section class="sponsors_img">
+	<div class="support_sponsors">
+	<div class="sponsors_img">
 		<img src="img/viborgkommune.jpg" alt="viborg kommune">
-	</section>
-	<section class="sponsors_img">
+	</div>
+	<div class="sponsors_img">
 		<img src="img/danishfilmins.jpg" alt="danish film institute">
-	</section>
-	<section class="sponsors_img europeancapital">
+	</div>
+	<div class="sponsors_img europeancapital">
 		<img src="img/europeancapital.jpg" alt="european capital of culture">
-	</section>
+	</div>
 </div>
 		<footer>
 			<div class="col-sm-4">

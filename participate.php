@@ -12,7 +12,7 @@
 	<p>Share your creativity with us and have a chance for your video to be selected as one of the official videos promoting Aarhus European Capital of Culture in 2017.<br>All fields are required!</p>
 	</article>
 <div class="upload_form">
-	<section class="aarhus_img"><img src="img/2017.png" alt="aarhus 2017"></section>
+	<div class="aarhus_img"><img src="img/2017.png" alt="aarhus 2017"></div>
 	<h3 class="sub">Fill out the form to share your video!</h3>
 	<div class="opaque_form"></div>
 	<form action="video_database.php" method="POST">
