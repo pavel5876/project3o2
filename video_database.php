@@ -1,11 +1,9 @@
 <?php
-    if(isset($_POST['share']))
-{
     try {
 
         // connect to mysql
 
-        $pdoConnect = new PDO('mysql:host=localhost;dbname=videos_db;charset=utf8','root','');
+        $pdoConnect = new PDO('mysql:host=angelosantoniou.com.mysql;dbname=angelosantoniou_com;charset=utf8','angelosantoniou_com','PXXkSYzu');
     } 
     catch (PDOException $e) {
         echo $e->getMessage();
@@ -23,15 +21,20 @@
     $link = $_POST['link'];
     $description = $_POST['videodescription'];
     
-    // mysql query to insert data
+    $newlink = substr($link, 16);
+    // query to insert data
 
-    $pdoQuery = "INSERT INTO `videos`(`upl_first_name`, `upl_last_name`, `birthdate`, `gender`, `email`, `ocupation`, `videoname`, `videotype`, `link`, `description`) VALUES (:uplfirstname,:upllastname,:uplbirthdate,:uplgender,:email,:ocupation,:videoname,:videotype,:link,:videodescription)";
+    $pdoQuery = "INSERT INTO `videos`(`upl_first_name`, `upl_last_name`, `birthdate`, `gender`, `email`, `ocupation`, `videoname`, `videotype`, `link`, `description`) VALUES (:uplfirstname,:upllastname,:uplbirthdate,:uplgender,:email,:ocupation,:videoname,:videotype,:newlink,:videodescription)";
     
     $pdoResult = $pdoConnect->prepare($pdoQuery);
   
-    $pdoexec = $pdoResult->execute(array(":uplfirstname"=>$uplfname,":upllastname"=>$upllname,":uplbirthdate"=>$birthdate,":uplgender"=>$gender,":email"=>$email,":ocupation"=>$ocupation,":videoname"=>$videoname,":videotype"=>$videotype,":link"=>$link,":videodescription"=>$description));
+    $pdoexec = $pdoResult->execute(array(":uplfirstname"=>$uplfname,":upllastname"=>$upllname,":uplbirthdate"=>$birthdate,":uplgender"=>$gender,":email"=>$email,":ocupation"=>$ocupation,":videoname"=>$videoname,":videotype"=>$videotype,":newlink"=>$newlink,":videodescription"=>$description));
     
-    // check if mysql insert query successful
-}
-header("location: participate.php?adedd=$videoname");
+    if($pdoexec)
+    {
+        echo 'You video is shared! | Go to the <a href="gallery.php">gallery.</a>';
+    }else{
+        echo 'An error occured | Go back to <a href="participate.php">participate.</a>';
+    }
+
 ?>
